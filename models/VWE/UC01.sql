@@ -24,7 +24,6 @@
         set REMARKS_BY_UNHAPPY_CUSTOMERS='taste is very good' 
          where STATUS='Happy' and RATING=5",
  
- 
         "update  VWE_DATABASE.PUBLIC.REVIEW_NEW
         set REMARKS_BY_UNHAPPY_CUSTOMERS='Poor quality,bad packaging ' 
         where STATUS='Unhappy' and RATING=1",
