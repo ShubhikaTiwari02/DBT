@@ -1,0 +1,1 @@
+select * from  VWE_DATABASE.PUBLIC.ORDERS_NEW
