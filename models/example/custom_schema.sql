@@ -1,2 +1,2 @@
-{{ config(schema='VWE_DATABASE') }}
+{{ config(schema='custom_shubhika') }}
 select * VWE_DATABASE.PUBLIC.REVIEW_NEW
