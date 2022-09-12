@@ -1,1 +1,0 @@
-select * from VWE_DATABASE.PUBLIC.REVIEW_NEW

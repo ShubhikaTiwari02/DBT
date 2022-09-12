@@ -1,0 +1,30 @@
+
+version: 2
+
+sources:
+  - name: DBT_STIWARI
+    database: VWE_DATABASE
+
+    freshness: # default freshness
+      warn_after: {count: 1, period: minute}
+      error_after: {count: 2, period: minute}
+
+    loaded_at_field: ORDER_DATE
+
+    tables:
+      - name: UC01        
+      # this will use the freshness defined above
+
+      - name: DAILY_ACTIVE_USER
+        freshness: # make this a little more strict
+          warn_after: {count: 1, period: minute}
+          error_after: {count: 1, period: minute}
+          # Apply a where clause in the freshness query
+          filter: datediff('day', ORDER_DATE, current_timestamp) < 2
+
+
+      - name: MATERLIZE_TABLE
+        freshness: # do not check freshness for this table
+
+
+
