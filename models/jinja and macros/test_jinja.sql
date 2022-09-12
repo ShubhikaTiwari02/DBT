@@ -1,5 +1,5 @@
 {% set sql_statement %}
-    select conversion_rate from VWE_DATABASE.PUBLIC.CONVERTED_USER
+    select conversion_rate from VWE_DATABASE.PUBLIC.CONVERTED_USERS
 {% endset %}
 
 {%- set conversion= dbt_utils.get_query_results_as_dict(sql_statement) -%}

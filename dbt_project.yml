@@ -15,7 +15,8 @@ profile: 'default'
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
-seed-paths: ["seeds"]
+# seed-paths: ["seeds"]
+# seed-paths: ["custom_seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
@@ -37,6 +38,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # on-run-end: grant select on future tables in schema DBT_STIWARI_CUSTOM_SHUBHIKA to role Markating ;
 
 models:
+# pre-hook: create or replace table VWE_DATABASE.PUBLIC.Employee(id integer, name string, address varchar(50),salary integer);commit;
+#  pre-hook: insert into table VWE_DATABASE.PUBLIC.Employee(id ,name,address,salary)values('101','shubhika','pune','300000');commit;
+
   my_new_project:
     # Applies to all files under models/example/
     example:
