@@ -33,12 +33,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 #on-run-start: grant usage on schema DBT_STIWARI_CUSTOM_SHUBHIKA to role REPORTER;
 
-on-run-start: grant select on future tables in schema DBT_STIWARI_CUSTOM_SHUBHIKA to role REPORTER ;
-on-run-end: grant select on future tables in schema DBT_STIWARI_CUSTOM_SHUBHIKA to role Markating ;
+# on-run-start: grant select on future tables in schema DBT_STIWARI_CUSTOM_SHUBHIKA to role REPORTER ;
+# on-run-end: grant select on future tables in schema DBT_STIWARI_CUSTOM_SHUBHIKA to role Markating ;
 
 models:
   my_new_project:
     # Applies to all files under models/example/
     example:
       materialized: view
+   
+
      
